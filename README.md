@@ -19,6 +19,8 @@ This assignment aims to test your understanding of JavaScript basics, control st
 
 #### **Part 1: JavaScript Basics**
 
+
+
 1. **Variables and Data Types**:
    - Declare variables of different types: string, number, boolean, array, and object.  
    - Use `console.log()` to print their values and types in the browser console.  
@@ -79,3 +81,64 @@ This assignment aims to test your understanding of JavaScript basics, control st
 - Have fun and get creative!  
 
 Happy Coding! 💻✨  
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Webpage</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        .box {
+            padding: 20px;
+            border: 1px solid #ccc;
+            display: inline-block;
+            margin-top: 20px;
+        }
+        button {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="title">JavaScript Interactive Webpage</h1>
+    <button onclick="changeColor()">Change Text Color</button>
+    
+    <div class="box">
+        <p>Counter: <span id="counter">0</span></p>
+        <button onclick="incrementCounter()">Increase Count</button>
+    </div>
+    
+    <div class="box">
+        <p>Type something:</p>
+        <input type="text" id="userInput" onkeyup="showMessage()">
+        <p id="message"></p>
+    </div>
+    
+    <script>
+        function changeColor() {
+            document.getElementById("title").style.color = "blue";
+        }
+        
+        let count = 0;
+        function incrementCounter() {
+            count++;
+            document.getElementById("counter").textContent = count;
+        }
+        
+        function showMessage() {
+            let input = document.getElementById("userInput").value;
+            document.getElementById("message").textContent = "You typed: " + input;
+        }
+    </script>
+</body>
+</html>
